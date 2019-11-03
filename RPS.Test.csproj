@@ -72,7 +72,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="RPS">
-      <Version>1.0.1910.292-beta</Version>
+      <Version>1.0.1911.30-beta</Version>
     </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
