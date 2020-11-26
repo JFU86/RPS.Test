@@ -32,13 +32,14 @@ namespace RPS.Test
                 // var property = RPS.Data.Property.ForId(1);
 
                 // Try to login to the API with user credentials.
-                bool login = RPS.API.Login(property, "demo", "");
+                var login = RPS.API.Login(property, "demo", "");
+                //var user = login.GetUser();
 
                 // Try to login to the API with a session guid.
                 //bool login = RPS.API.Login("a97b76d0cdec4dd491251d6942b4e4a86b90aa769626453ab66d0a2d7d201d5a");
 
                 // If the login was successful, we can for example fetch the appointments from today and do stuff with them.
-                if (login)
+                if (!string.IsNullOrWhiteSpace(login.SessionGuid))
                 {
                     List<RPS.Data.Appointment> appointments = RPS.Data.Appointment.ForDate(DateTime.Today);
 
